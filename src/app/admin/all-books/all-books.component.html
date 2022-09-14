@@ -1,0 +1,32 @@
+<div class="container">
+  <h3 class="text-center">All Books</h3>
+  <table class="table table-striped" *ngIf="books$ | async">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Author</th>
+        <th>Price</th>
+        <th>Published Date</th>
+        <th>Action</th>
+        <th>Delete</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of books$ | async, let i = index">
+      
+        <td>{{i+1}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.author}}</td>
+        <td>{{item.price}}$</td>
+        <td>{{item.publishedDate | date}}</td>
+        <td>
+          <a class="btn btn-info" [routerLink]="['/book/update/', item.id]">Update</a>
+        </td>
+        <td>
+          <a class="btn btn-danger" (click)="deleteBook(item.id)">Delete</a>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,4 @@
+<div class="d-flex justify-content-end p-3 mb-3 bg-primary rounded">
+  <a [routerLink]="['/viewcart/']"><span class="text-dark"><i class="fa-solid fa-cart-shopping fa-2x"></i></span></a> &nbsp;&nbsp;
+  <span class="badge bg-dark pt-2">{{cartSize$ | async}}</span>
+</div>

@@ -1,0 +1,40 @@
+<div class="container">
+  <form [formGroup]="updateForm" class="bg-light p-5 shadow mb-5 rounded border">
+    <h3 class="text-center pb-2">Update Book Form</h3>
+    <div class="mb-3">
+      <label for="title" class="form-label">Title</label>
+      <input type="text" id="title" class="form-control" formControlName="title">
+    </div>
+
+    <div class="mb-3">
+      <label for="author" class="form-label">Author</label>
+      <input type="text" id="author" class="form-control" formControlName="author">
+    </div>
+
+    <div class="mb-3">
+      <label for="price" class="form-label">Price</label>
+      <input type="number" id="price" class="form-control" formControlName="price">
+    </div>
+
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" id="description" class="form-control" formControlName="description">
+    </div>
+
+    <div class="mb-3">
+      <label for="imageUrl" class="form-label">Image Url</label>
+      <input type="text" id="imageUrl" class="form-control" formControlName="imageUrl">
+    </div>
+
+    <div class="mb-3">
+      <label for="comments" class="form-label">Comments</label>
+      <input type="text" id="comments" class="form-control" formControlName="comments">
+    </div>
+
+    <div class="mb-5">
+      <label for="publishedDate" class="form-label">Published Date</label>
+      <input type="date" id="publishedDate" class="form-control" formControlName="publishedDate">
+    </div>
+    <button class="btn btn-outline-primary w-100" (click)="updateBook()">Update Book</button>
+  </form>
+</div>

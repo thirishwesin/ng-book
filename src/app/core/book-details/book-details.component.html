@@ -1,0 +1,21 @@
+<div class="container" *ngIf="book$ | async as book">
+  <div class="row mt-5">
+    <div class="col-md-5">
+      <img [src]="book.imageUrl"class="img-fluid" alt="" id="img">
+    </div>
+    <div class="col-md-7">
+      <div class="container mt-4">
+        <h4>{{book.title}}</h4>
+        <p class="lead fw-bold">{{book?.description}}</p>
+        <p class="lead fw-bold">Author : {{book?.author}}</p>
+        <p class="lead fw-bold">Price : {{book?.price}}$</p>
+      </div>
+    </div>
+  </div>
+  <div class="mt-4">
+    <button class="btn btn-primary me-3" (click)="addToCart(book)">Add Cart</button>
+    <button class="btn btn-primary me-3" (click)="goHome()">Continue</button>
+    <button class="btn btn-primary" (click)="cartView()">View Cart</button>
+  </div>
+</div>
+
